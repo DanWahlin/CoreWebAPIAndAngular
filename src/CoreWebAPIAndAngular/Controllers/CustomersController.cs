@@ -4,27 +4,18 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using CoreWebAPIAndAngular.Model;
+using CoreWebAPIAndAngular.Repository;
 
 namespace CoreWebAPIAndAngular.Controllers
 {
     [Route("api/[controller]")]
     public class CustomersController : Controller
     {
-        //Cheap way to create a static cache of data
-        //Purely for demo!
-        static List<Customer> _customers = new List<Customer>
-            {
-                new Customer { Id = 1, FirstName="John", LastName="Doe",
-                                Address = new Address { Id=1, City="Chandler", State="AZ", Zip=85249 }},
-                new Customer { Id = 2, FirstName="Jane", LastName="Doe",
-                                Address = new Address { Id=2, City="Chandler", State="AZ", Zip=85249 }},
-                new Customer { Id = 3, FirstName="Tina", LastName="Smith",
-                                Address = new Address { Id=3, City="Redmond", State="WA", Zip=98052 }}
-            };
+        List<Customer> _customers;
 
-        public CustomersController()
+        public CustomersController(ICustomersRepository repo)
         {
-
+            _customers = repo.Customers;
         }
 
         // GET api/customers

@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.FileProviders;
 using System.IO;
+using CoreWebAPIAndAngular.Repository;
 
 namespace CoreWebAPIAndAngular
 {
@@ -36,6 +37,8 @@ namespace CoreWebAPIAndAngular
         // This method gets called by the runtime. Use this method to add services to the container
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSingleton<ICustomersRepository, CustomersRepository>();
+
             // Add framework services.
             services.AddApplicationInsightsTelemetry(Configuration);
 

@@ -71,6 +71,7 @@ namespace CoreWebAPIAndAngular
                     name: "default",
                     template: "{controller=Home}/{action=Index}");
 
+                //Not needed but left in for reference when HTML5 routes are used by SPA
                 //https://github.com/aspnet/JavaScriptServices/blob/dev/samples/angular/MusicStore/Startup.cs
                 //routes.MapSpaFallbackRoute("spa-fallback", new { controller = "Home", action = "Index" });
 

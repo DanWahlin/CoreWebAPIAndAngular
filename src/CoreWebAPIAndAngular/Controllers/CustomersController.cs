@@ -19,7 +19,7 @@ namespace CoreWebAPIAndAngular.Controllers
         }
 
         // GET api/customers
-        [HttpGet]
+        //[HttpGet]
         [ProducesResponseType(typeof(List<Customer>), 200)]
         [ProducesResponseType(typeof(List<Customer>), 404)]
         public ActionResult Get()

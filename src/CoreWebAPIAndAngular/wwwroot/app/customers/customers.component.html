@@ -1,0 +1,16 @@
+<br />
+<button class="btn btn-success" (click)="getCustomers()">Get Customers</button>
+<button class="btn btn-success" (click)="getCustomersWithPromise()">Get Customers w/ Promise</button>
+<button class="btn btn-success" (click)="getCustomer(2)">Get Customer</button>
+
+<br /><br />
+<button class="btn btn-success" (click)="postCustomer()">Post Customer</button>
+<button class="btn btn-success" (click)="putCustomer()">Put Customer</button>
+<button class="btn btn-success" (click)="deleteCustomer()">Delete Customer</button>
+
+<br /><br />
+{{ date | date:'hh:mm:ss' }}
+<br /><br />
+<pre>
+{{ data | json }}
+</pre>

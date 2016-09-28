@@ -13,4 +13,6 @@ Demonstration of using ASP.NET Core Web API features with Angular 2
 
 1. Run `npm run tsc:w` to compile Angular 2 TypeScript code to ES5 and watch for changes
 
-1. Open the .sln file at the root of the project in Visual Studio
+1. Open the .sln file at the root of the project in Visual Studio.
+
+Note: VS can install npm dependencies but I prefer to do it as a separate step.
